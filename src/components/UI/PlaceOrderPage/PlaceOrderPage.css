@@ -1,0 +1,81 @@
+.place-order-details {
+  width: 500px;
+  border: 1px solid black;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: 10px 10px 10px 0px burlywood;
+}
+.place-order-headers {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+  font-size: 23px;
+}
+.place-order-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+  font-size: 20px;
+}
+.place-order-details-title,
+h2 {
+  text-align: center;
+  padding: 15px 15px;
+}
+.place-order-details-main-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+  font-size: 20px;
+}
+.place-order-details-main-total-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+  font-size: 25px;
+  color: rgb(9, 197, 9);
+}
+.place-order-page-button {
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+
+  /* margin: auto; */
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.place-order-page-button > button {
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 10px 10px;
+  padding: 15px 70px;
+  font-size: 20px;
+}
+.place-order-page-address {
+  margin: 10px 10px;
+}
+.place-order-page-address > p,
+.place-order-page-address > h3 {
+  margin: 5px 5px;
+}
+.place-order-page-button > button:hover {
+  color: coral;
+}

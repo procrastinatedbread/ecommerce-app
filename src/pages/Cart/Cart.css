@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+  margin: 10px 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.cart-items-and-cart-order-details {
+  margin: auto;
+  width: 80vw;
+  height: fit-content;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart-order-details {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 26vh;
+
+  height: fit-content;
+
+  width: fit-content;
+  box-shadow: 10px 10px 10px 0px burlywood;
+}

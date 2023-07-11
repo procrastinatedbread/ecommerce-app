@@ -1,0 +1,103 @@
+.login-card {
+  width: 425px;
+  border: 1px solid black;
+  height: 425px;
+  text-align: center;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  box-shadow: 10px 10px 10px 0px burlywood;
+  /* align-items: center; */
+  color: burlywood;
+  padding: 20px 20px;
+}
+.signup-card {
+  width: 467px;
+  border: 1px solid black;
+  height: 500px;
+  text-align: center;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  box-shadow: 10px 10px 10px 0px burlywood;
+  /* align-items: center; */
+  color: burlywood;
+  padding: 20px 2px;
+}
+.login-card-email-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-bottom: 20px; */
+  /* border: 1px solid black; */
+}
+.login-card-email-section > label,
+.login-card-password-section > label {
+  /* align-items: center; */
+  font-size: 35px;
+}
+
+.login-card-email-section > input,
+.login-card-password-section > input {
+  width: 70%;
+  margin: auto;
+  height: 35px;
+  font-size: larger;
+  padding: 5px 10px;
+}
+.login-card-password-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-link {
+  text-decoration: none;
+  font-size: 25px;
+  color: burlywood;
+  border: 1px solid burlywood;
+  margin: 0px auto;
+  padding: 10px 10px;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+}
+.login-link:hover {
+  color: coral;
+  padding: 10px 15px;
+}
+.login-card-email-section > input::placeholder,
+.login-card-password-section > input::placeholder {
+  font-size: 20px;
+  padding: 15px 15px;
+}
+.sign-up-link {
+  text-decoration: none;
+  font-size: 17px;
+  color: burlywood;
+  border: 1px solid burlywood;
+  margin: 0px auto;
+  padding: 10px 10px;
+}
+.sign-up-link:hover {
+  color: coral;
+  padding: 10px 15px;
+}

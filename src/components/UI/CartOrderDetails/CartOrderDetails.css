@@ -1,0 +1,79 @@
+.cart-order-details {
+  width: 400px;
+  height: 525px;
+  border: 1px solid black;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 10px;
+  padding: 10px;
+}
+.cart-order-coupon-apply {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+  font-size: 25px;
+}
+.cart-order-coupon-apply > button {
+  font-size: 17px;
+  padding: 5px 5px;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.cart-order-coupon-apply > button:hover {
+  color: coral;
+}
+.cart-order-details-title {
+  text-align: center;
+  padding: 15px 15px;
+  font-size: 30px;
+}
+.cart-order-details-main {
+  font-size: 24px;
+}
+.cart-order-details-main-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+}
+.cart-order-details-main-total-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+  font-size: 25px;
+  color: rgb(166, 229, 128);
+}
+.cart-order-details-savings-statement {
+  text-align: center;
+  margin: 15px 15px;
+  font-size: 25px;
+  color: rgb(166, 229, 128);
+}
+.checkout-button {
+  display: block;
+  padding: 15px 50px;
+  font-size: 20px;
+  margin: auto;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.checkout-button:hover {
+  color: coral;
+}

@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  align-items: baseline;
+  padding: 4vh;
+}
+.first-list {
+  list-style-type: none;
+}
+.second-list {
+  list-style-type: none;
+}
+.third-list {
+  list-style-type: none;
+}
+.footer-brand {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.list-item {
+  padding: 1vh;
+  font-size: large;
+  margin: 1vh;
+}
+.list-item-link {
+  color: burlywood;
+  text-decoration: none;
+}
+.list-item-link:hover {
+  color: coral;
+}

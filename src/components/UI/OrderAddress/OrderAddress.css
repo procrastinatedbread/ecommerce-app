@@ -1,0 +1,17 @@
+.order-address {
+  width: 20vw;
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 10px;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: 10px 10px 10px 0px burlywood;
+  padding: 20px 15px;
+  align-items: first baseline;
+}

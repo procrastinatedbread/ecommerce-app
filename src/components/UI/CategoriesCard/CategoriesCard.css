@@ -1,0 +1,23 @@
+.category-card {
+  width: 10vw;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 0px 0px gray;
+  padding: 3vw;
+  border-radius: 50%;
+
+  background-image: linear-gradient(
+    to right,
+
+    #f2f0f0 25%,
+    #cac8c8 75%
+  );
+  text-align: center;
+  box-shadow: 10px 10px 10px 0px burlywood;
+}
+
+.category-title {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.category-description {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

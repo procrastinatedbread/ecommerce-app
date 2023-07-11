@@ -1,0 +1,10 @@
+.products-and-filters {
+  display: grid;
+  grid-template-columns: 18% 82%;
+}
+.products-display-section {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
