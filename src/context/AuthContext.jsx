@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [token, setToken] = useState("");
+
   const loginHandler = async ({ email, password }) => {
     try {
       const credentials = {

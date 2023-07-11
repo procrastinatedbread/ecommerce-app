@@ -1,29 +1,35 @@
-import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import Navbar from "../../components/RootLayout/Navbar/Navbar";
 import "./LoginPage.css";
 import { makeServer } from "../../server";
 import { AuthContext } from "../../context/AuthContext";
 
 const LoginPage = () => {
-  const { loginHandler } = useContext(AuthContext);
+  // const navigate = useNavigate();
+  const { loginHandler, token } = useContext(AuthContext);
   const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
   const fixedLoginDetails = {
     email: "adarshbalika@gmail.com",
     password: "adarshbalika",
   };
   const onSubmitHandler = (e) => {
-    console.log("submit");
     e.preventDefault();
     loginHandler(loginDetails);
   };
   const onTestLogin = () => {
-    console.log("test login");
     setLoginDetails({
       email: fixedLoginDetails.email,
       password: fixedLoginDetails.password,
     });
   };
+
+  // useEffect(() => {
+  //   if (token) {
+  //     navigate("/products");
+  //   }
+  // }, [token]);
+
   return (
     <div className="login-page-component">
       <Navbar />
