@@ -9,8 +9,7 @@ const LogOutPage = () => {
     <>
       <Navbar />
       <div className="logout-container">
-        <h2>Hey there</h2>
-        <h2>You are already logged in</h2>
+        <h2>Hey there, you are already logged in.</h2>
         <button className="logout-btn" onClick={logOutHandler}>
           Log out
         </button>

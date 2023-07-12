@@ -1,32 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./SignUpPage.css";
 import Navbar from "../../components/RootLayout/Navbar/Navbar";
+import { AuthContext } from "../../context/AuthContext";
 
 const SignUpPage = () => {
-  const handleSignUp = async (e) => {
+  const { signUpHandler } = useContext(AuthContext);
+  const [signUpDetails, setSignUpDetails] = useState({});
+  const onSubmitHandler = (e) => {
+    console.log("signup");
     e.preventDefault();
-    const credentials = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      password: e.target.password.value,
-    };
-    try {
-      const res = await fetch("/api/auth/signup", {
-        method: "POST",
-        body: JSON.stringify(credentials),
-      });
-      const data = await res.json();
-      localStorage.setItem("name", data.createdUser.name);
-      localStorage.setItem("token", data.encodedToken);
-    } catch (err) {
-      console.log(err);
-    }
+    signUpHandler(signUpDetails);
   };
   return (
     <div className="login-page-component">
       <Navbar />
-      <form onSubmit={handleSignUp}>
+      <form onSubmit={onSubmitHandler}>
         <div className="signup-card">
           <div className="login-card-name-section">
             <label htmlFor="first-name">First Name:</label>
@@ -35,6 +24,12 @@ const SignUpPage = () => {
               name="firstName"
               id="firstName"
               placeholder="first name"
+              onChange={(e) =>
+                setSignUpDetails({
+                  ...signUpDetails,
+                  firstName: e.target.value,
+                })
+              }
             />
             <label htmlFor="last-name">Last Name:</label>
             <input
@@ -42,6 +37,9 @@ const SignUpPage = () => {
               name="lastName"
               id="lastName"
               placeholder="last name"
+              onChange={(e) =>
+                setSignUpDetails({ ...signUpDetails, lastName: e.target.value })
+              }
             />
           </div>
           <div className="login-card-email-section">
@@ -51,6 +49,9 @@ const SignUpPage = () => {
               name="email"
               id="email"
               placeholder="test@gmail.com"
+              onChange={(e) =>
+                setSignUpDetails({ ...signUpDetails, email: e.target.value })
+              }
             />
           </div>
           <div className="login-card-password-section">
@@ -60,11 +61,19 @@ const SignUpPage = () => {
               name="password"
               id="password"
               placeholder="********"
+              onChange={(e) =>
+                setSignUpDetails({ ...signUpDetails, password: e.target.value })
+              }
             />
           </div>
-          <NavLink type="submit" className="login-link">
+          <button
+            type="submit"
+            className="login-link"
+            required
+            onClick={() => signUpHandler(signUpDetails)}
+          >
             Sign up
-          </NavLink>
+          </button>
           <NavLink className="sign-up-link" to="/login">
             Already have an account? Let's log in
           </NavLink>
