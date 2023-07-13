@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
+import { AuthContext } from "../../../context/AuthContext";
 
 const Navbar = () => {
-  const [user, setUser] = useState(() => localStorage.getItem("token"));
+  const { logOutHandler, token, isLoggedIn } = useContext(AuthContext);
   return (
     <>
       <nav className="navbar">
@@ -23,6 +24,9 @@ const Navbar = () => {
 
         <ul className="navbar-links">
           <li>
+            <button>{isLoggedIn ? "Logout" : "Login"}</button>
+          </li>
+          <li>
             {" "}
             <NavLink to="/wishlist" className="navbar-link">
               Wishlist
@@ -37,6 +41,9 @@ const Navbar = () => {
             <NavLink to="/login" className="navbar-link">
               <FontAwesomeIcon icon={faUser} />
             </NavLink>
+          </li>
+          <li>
+            <button></button>
           </li>
         </ul>
       </nav>
