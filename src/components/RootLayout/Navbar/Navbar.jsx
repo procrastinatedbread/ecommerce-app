@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
@@ -7,6 +7,10 @@ import { AuthContext } from "../../../context/AuthContext";
 
 const Navbar = () => {
   const { logOutHandler, token, isLoggedIn } = useContext(AuthContext);
+  const removeProductsHandler = () => {
+    logOutHandler();
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -24,7 +28,20 @@ const Navbar = () => {
 
         <ul className="navbar-links">
           <li>
-            <button>{isLoggedIn ? "Logout" : "Login"}</button>
+            {isLoggedIn ? (
+              <NavLink to="/">
+                <button
+                  className="login-logout-button"
+                  onClick={removeProductsHandler}
+                >
+                  Logout
+                </button>
+              </NavLink>
+            ) : (
+              <NavLink to="/login">
+                <button className="login-logout-button">Login</button>
+              </NavLink>
+            )}
           </li>
           <li>
             {" "}
@@ -41,9 +58,6 @@ const Navbar = () => {
             <NavLink to="/login" className="navbar-link">
               <FontAwesomeIcon icon={faUser} />
             </NavLink>
-          </li>
-          <li>
-            <button></button>
           </li>
         </ul>
       </nav>

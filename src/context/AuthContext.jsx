@@ -1,11 +1,12 @@
 import { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [token, setToken] = useState("");
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const loginHandler = async ({ email, password }) => {
     try {
       const credentials = {
@@ -22,7 +23,12 @@ const AuthProvider = ({ children }) => {
         localStorage.setItem("token", data.encodedToken);
         localStorage.setItem("email", data.foundUser.email);
         localStorage.setItem("password", data.foundUser.password);
-        navigate("/products");
+        // navigate("/products");
+        if (location?.state?.from) {
+          navigate(location?.state?.from?.pathname);
+        } else {
+          navigate("/products");
+        }
       }
     } catch (e) {
       console.error(e);
@@ -53,7 +59,10 @@ const AuthProvider = ({ children }) => {
       if (res.status === 201) {
         const data = await res.json();
         setToken(data.encodedToken);
-        navigate("/login");
+        // localStorage.setItem("token", data.encodedToken);
+        // localStorage.setItem("email", data.foundUser.email);
+        // localStorage.setItem("password", data.foundUser.password);
+        navigate("/products");
       }
     } catch (e) {
       console.error(e);

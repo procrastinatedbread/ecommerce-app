@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../components/RootLayout/Navbar/Navbar";
 import "./LoginPage.css";
 import { makeServer } from "../../server";
@@ -7,6 +7,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 const LoginPage = () => {
   // const navigate = useNavigate();
+
   const { loginHandler, token } = useContext(AuthContext);
   const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
   const fixedLoginDetails = {

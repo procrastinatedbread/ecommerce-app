@@ -53,3 +53,16 @@
   height: 6.5vh;
   width: 4vw;
 } */
+.login-logout-button {
+  color: burlywood;
+  font-size: 2vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  padding: 10px 10px;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+}

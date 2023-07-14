@@ -24,6 +24,7 @@ const SignUpPage = () => {
               name="firstName"
               id="firstName"
               placeholder="first name"
+              required
               onChange={(e) =>
                 setSignUpDetails({
                   ...signUpDetails,
@@ -37,6 +38,7 @@ const SignUpPage = () => {
               name="lastName"
               id="lastName"
               placeholder="last name"
+              required
               onChange={(e) =>
                 setSignUpDetails({ ...signUpDetails, lastName: e.target.value })
               }
@@ -49,6 +51,7 @@ const SignUpPage = () => {
               name="email"
               id="email"
               placeholder="test@gmail.com"
+              required
               onChange={(e) =>
                 setSignUpDetails({ ...signUpDetails, email: e.target.value })
               }
@@ -61,6 +64,7 @@ const SignUpPage = () => {
               name="password"
               id="password"
               placeholder="********"
+              required
               onChange={(e) =>
                 setSignUpDetails({ ...signUpDetails, password: e.target.value })
               }
