@@ -62,7 +62,24 @@ const ProductProvider = ({ children }) => {
           state.selectedCategories.includes(categoryName)
         )
       : searchedProducts;
-
-  return <ProductContext.Provider>{children}</ProductContext.Provider>;
+  const sortedProducts =
+    state.sortOrder !== null
+      ? filteredProducts.sort((a, b) =>
+          state.sortOrder === "HTL" ? b.price - a.price : a.price - b.price
+        )
+      : filteredProducts;
+  const productsRating = state.selectedRating
+    ? sortedProducts.filter(({ rating }) => rating >= state.selectedRating)
+    : sortedProducts;
+  const filteredPriceProducts = state.selectedPrice
+    ? productsRating.filter(({ price }) => price <= state.selectedPrice)
+    : productsRating;
+  return (
+    <ProductContext.Provider
+      value={{ state, dispatch, product, setProduct, filteredProducts }}
+    >
+      {children}
+    </ProductContext.Provider>
+  );
 };
 export default ProductProvider;
