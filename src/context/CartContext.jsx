@@ -1,16 +1,22 @@
-import axios from "axios";
 import { createContext, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
+import axios from "axios";
 import { AuthContext } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
 
-const CartProvider = ({ children }) => {
+export default function CartProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
+
+  const navigate = useNavigate();
   const { isLoggedIn } = useContext(AuthContext);
-  const { navigate } = useNavigate();
+  console.log(isLoggedIn);
+  // const {token,loginHandler} = useContext(AuthContext)
 
   const addCartItems = async (product) => {
+    // loginHandler()
+    console.log("Adding item to cart:", product);
     const token = localStorage.getItem("token");
     try {
       const response = await fetch("/api/user/cart", {
@@ -20,20 +26,24 @@ const CartProvider = ({ children }) => {
         },
         body: JSON.stringify({ product }),
       });
-
       if (response.status === 201) {
         const data = await response.json();
+
         setCartProducts(data.cart);
       }
     } catch (e) {
       console.error(e);
     }
   };
+
   const removeCartHandler = (productId) => {
+    console.log("Removing item from wishlist:", productId);
     const token = localStorage.getItem("token");
     axios
       .delete(`/api/user/cart/${productId}`, {
-        headers: { authorization: token },
+        headers: {
+          authorization: `bearer ${token}`,
+        },
       })
       .then((resp) => {
         setCartProducts(resp.data.cart);
@@ -43,6 +53,7 @@ const CartProvider = ({ children }) => {
   const isCartProductPresent = (id) => {
     return cartProducts.some((cartProduct) => cartProduct?._id === id);
   };
+
   const [discount, setDiscount] = useState(0);
 
   const totalPrice = cartProducts.reduce(
@@ -54,9 +65,11 @@ const CartProvider = ({ children }) => {
   const qty = cartProducts.reduce((acc, curr) => acc + curr.qty, 0);
   const grandTotal = totalPrice - discount;
   console.log(grandTotal);
+
   const handleAddCartItems = (product) => {
     isLoggedIn ? addCartItems(product) : navigate("/login");
   };
+
   const removeCartProducts = () => {
     setCartProducts([]);
   };
@@ -80,5 +93,4 @@ const CartProvider = ({ children }) => {
       {children}
     </CartContext.Provider>
   );
-};
-export default CartProvider;
+}

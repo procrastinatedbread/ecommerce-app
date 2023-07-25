@@ -1,0 +1,146 @@
+.address-main {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-success {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.price-breakup {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+}
+.address-card {
+  border: 1px solid black;
+  margin-bottom: 0.5rem;
+  padding: 10px 20px;
+  width: 50vh;
+  margin-left: 5rem;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.address-card > p {
+  margin: auto;
+}
+.address-card-btn-container {
+  margin: 1.6rem auto;
+}
+.address-card-btn {
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.8rem;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.edit-btn {
+  margin: 10px 10px;
+  padding: 5px 5px;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.remove-btn {
+  margin: 10px 10px;
+  padding: 5px 5px;
+  font-size: large;
+  cursor: pointer;
+
+  background-color: white;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.address-container {
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px 20px;
+  font-size: large;
+}
+.checkout-btn {
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: block;
+  margin: auto;
+  font-size: larger;
+  padding: 6px 12px;
+}
+.checkout-btn:hover {
+  color: greenyellow;
+  padding: 6px 15px;
+}
+.add-btn {
+  margin-left: 5rem;
+  margin-top: 24px;
+  font-size: large;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 8px;
+}
+/* .place-order-btn{
+      margin-left:1rem;
+      font-size: large;
+      cursor: pointer;
+      border:1px solid black;
+      border-radius:12px;
+      padding:8px;
+    
+      } */
+.address-container {
+  margin-top: 1rem;
+  width: 40vh;
+  box-shadow: rgba(90, 90, 90, 0.35) 0px 5px 15px;
+  border-radius: 0.5rem;
+  margin-left: 14rem;
+}
+.address-container > div {
+  margin: 1.5rem 0;
+}
+
+.address-details {
+  display: flex;
+}

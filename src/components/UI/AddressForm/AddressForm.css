@@ -1,0 +1,69 @@
+.address-form-container {
+  background: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+
+  height: 100%;
+  z-index: 2;
+  transition: background ease 0.3s;
+}
+
+.address-form-input {
+  border-radius: var(--border-sm);
+  border: 2px solid #dfdfdf;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  width: 400px;
+  margin: 0.4rem;
+}
+
+.address-form-input::placeholder {
+  font-size: 0.8rem;
+}
+
+.address-form,
+.address-form .form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.address-form {
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  margin-left: 16rem;
+  width: 60vh;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.address-form > h4 {
+  font-size: 1.5rem;
+}
+.address-form > button {
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 3px 10px;
+  padding: 7px 9px;
+  font-size: 20px;
+}
+.address-form > button:hover {
+  color: coral;
+  padding: 7px 11px;
+}

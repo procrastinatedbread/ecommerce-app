@@ -9,19 +9,22 @@ export const categories = [
   {
     _id: uuid(),
     categoryName: "fiction",
+    categoryAltName: "Fiction",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "Literature in the form of prose, especially novels, that describes imaginary events and people",
   },
   {
     _id: uuid(),
     categoryName: "non-fiction",
+    categoryAltName: "Non Fiction",
     description:
       "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "self-help",
+    categoryAltName: "Self Help",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "A self-help book is one that is written with the intention to instruct its readers on solving personal problems.",
   },
 ];

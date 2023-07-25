@@ -8,7 +8,7 @@ const SignUpPage = () => {
   const { signUpHandler } = useContext(AuthContext);
   const [signUpDetails, setSignUpDetails] = useState({});
   const onSubmitHandler = (e) => {
-    console.log("signup");
+    // console.log("signup");
     e.preventDefault();
     signUpHandler(signUpDetails);
   };

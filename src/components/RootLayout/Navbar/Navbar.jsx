@@ -4,13 +4,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import { AuthContext } from "../../../context/AuthContext";
+import { WishlistContext } from "../../../context/WishlistContext";
+import { ProductContext } from "../../../context/ProductContext";
+import { CartContext } from "../../../context/CartContext";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { state: productState, dispatch } = useContext(ProductContext);
+  const { cartProducts, removeCartProducts } = useContext(CartContext);
+  const { removeWishlistProducts, state } = useContext(WishlistContext);
   const { logOutHandler, token, isLoggedIn } = useContext(AuthContext);
+
   const removeProductsHandler = () => {
     logOutHandler();
+    removeCartProducts();
+    removeWishlistProducts();
   };
 
+  console.log(state);
   return (
     <>
       <nav className="navbar">
@@ -22,6 +33,10 @@ const Navbar = () => {
             type="text"
             placeholder="Search your Book"
             className="navbar-search-section"
+            value={productState.searchText}
+            onChange={(e) => {
+              dispatch({ type: "SET_SEARCH_TEXT", payload: e.target.value });
+            }}
           />
           {/* <button className="navbar-search-button">Search</button> */}
         </div>
@@ -46,12 +61,12 @@ const Navbar = () => {
           <li>
             {" "}
             <NavLink to="/wishlist" className="navbar-link">
-              Wishlist
+              Wishlist ({state.wishListProducts.length})
             </NavLink>{" "}
           </li>
           <li>
             <NavLink to="/cart" className="navbar-link">
-              Cart
+              Cart({cartProducts.length})
             </NavLink>
           </li>
           <li>

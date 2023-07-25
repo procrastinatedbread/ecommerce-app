@@ -1,8 +1,17 @@
+/* .wishlist-page {
+  display: flex;
+  flex-direction: column;
+} */
+
 .wishlist-section {
-  margin: auto;
+  margin: 5vh auto;
+
   width: 60vw;
   height: 70vh;
   display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }

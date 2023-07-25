@@ -1,53 +1,55 @@
-import { createContext, useState } from "react";
+import { useState, createContext, useEffect, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { WishlistContext } from "./WishlistContext";
 
 export const AuthContext = createContext();
-const AuthProvider = ({ children }) => {
-  // const navigate = useNavigate();
-  const [token, setToken] = useState("");
-  const location = useLocation();
+
+export default function AuthProvider({ children }) {
   const navigate = useNavigate();
+  const [token, setToken] = useState("");
+
+  console.log(token);
+
   const loginHandler = async ({ email, password }) => {
     try {
-      const credentials = {
+      const creds = {
         email,
         password,
       };
-      const res = await fetch("/api/auth/login", {
+      const resp = await fetch("/api/auth/login", {
         method: "POST",
-        body: JSON.stringify(credentials),
+        body: JSON.stringify(creds),
       });
-      if (res.status === 200) {
-        const data = await res.json();
+      if (resp.status === 200) {
+        const data = await resp.json();
         setToken(data.encodedToken);
+
         localStorage.setItem("token", data.encodedToken);
-        localStorage.setItem("email", data.foundUser.email);
+        localStorage.setItem("user", data.foundUser.email);
         localStorage.setItem("password", data.foundUser.password);
-        // navigate("/products");
-        if (location?.state?.from) {
-          navigate(location?.state?.from?.pathname);
-        } else {
-          navigate("/products");
-        }
+        navigate("/products");
       }
     } catch (e) {
       console.error(e);
     }
   };
+
   const logOutHandler = () => {
     localStorage.removeItem("token");
     setToken("");
     navigate("/");
   };
+
   const checkUserStatus = () => {
     const encodedToken = localStorage.getItem("token", token);
     if (encodedToken) {
       setToken(encodedToken);
     }
   };
+
   const signUpHandler = async ({ email, password, firstName, lastName }) => {
     try {
-      const res = await fetch("api/auth/signup", {
+      const response = await fetch("api/auth/signup", {
         method: "POST",
         body: JSON.stringify({
           email,
@@ -56,32 +58,32 @@ const AuthProvider = ({ children }) => {
           lastName,
         }),
       });
-      if (res.status === 201) {
-        const data = await res.json();
+      if (response.status === 201) {
+        const data = await response.json();
+        console.log(data);
         setToken(data.encodedToken);
-        // localStorage.setItem("token", data.encodedToken);
-        // localStorage.setItem("email", data.foundUser.email);
-        // localStorage.setItem("password", data.foundUser.password);
-        navigate("/products");
+        navigate("/login");
       }
     } catch (e) {
-      console.error(e);
+      console.log(e);
     }
   };
-  const isLoggedIn = token.length !== 0;
+
+  const isLoggedIn = !!token;
+  console.log(isLoggedIn);
+
   return (
     <AuthContext.Provider
       value={{
         signUpHandler,
-        loginHandler,
-        token,
-        logOutHandler,
         checkUserStatus,
+        loginHandler,
+        logOutHandler,
+        token,
         isLoggedIn,
       }}
     >
       {children}
     </AuthContext.Provider>
   );
-};
-export default AuthProvider;
+}

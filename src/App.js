@@ -15,6 +15,9 @@ import RequiresAuth from "./components/RootLayout/RequiresAuth";
 import { useContext, useEffect } from "react";
 import AuthProvider, { AuthContext } from "./context/AuthContext";
 import LogOutPage from "./pages/LogOutPage/LogOutPage";
+import CheckoutDetails from "./components/UI/CheckoutDetails/CheckoutDetails";
+import OrderSuccess from "./components/UI/OrderSuccess";
+import Address from "./components/UI/Address/Address";
 
 function App() {
   const { checkUserStatus } = useContext(AuthContext);
@@ -41,10 +44,14 @@ function App() {
             </RequiresAuth>
           }
         />
+        <Route path="/product/:productId" element={<SingleProductPage />} />
+
         <Route path="/login" element={<LoginPage />} />
         <Route path="/logout" element={<LogOutPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/address" element={<Address />} />
+        <Route path="/order" element={<OrderSuccess />} />
 
         <Route path="/*" element={<ErrorPage />} />
       </Routes>

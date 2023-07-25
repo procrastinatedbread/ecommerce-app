@@ -1,0 +1,21 @@
+.order-success {
+  background-color: aqua;
+  display: block;
+  margin: 100px auto;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px 20px;
+}
+.order-success > h2 {
+  font-size: 35px;
+}
+.order-success > p {
+  font-size: 25px;
+}

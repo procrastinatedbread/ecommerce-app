@@ -13,6 +13,7 @@
   grid-template-rows: repeat(10, 1fr);
   font-size: larger;
   box-shadow: 10px 10px 10px 0px burlywood;
+  padding: 10px 2px;
 }
 .book-cover {
   grid-area: 1/1/7/3;
@@ -55,7 +56,7 @@
   padding: 10px;
 }
 .book-basic-details > .book-title {
-  font-size: 28px;
+  font-size: 23px;
 }
 .book-basic-details > .book-author {
   font-size: 18px;
