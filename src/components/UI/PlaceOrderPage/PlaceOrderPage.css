@@ -1,4 +1,4 @@
-.place-order-details {
+/* .place-order-details {
   width: 500px;
   border: 1px solid black;
   background-image: linear-gradient(
@@ -42,11 +42,11 @@ h2 {
   color: rgb(9, 197, 9);
 }
 .place-order-page-button {
-  /* display: block; */
+  
   display: flex;
   justify-content: center;
 
-  /* margin: auto; */
+  
   background-image: linear-gradient(
     to right,
 
@@ -78,4 +78,4 @@ h2 {
 }
 .place-order-page-button > button:hover {
   color: coral;
-}
+} */

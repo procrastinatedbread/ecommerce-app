@@ -11,7 +11,7 @@ import "./SingleProductPage.css";
 import { WishlistContext } from "../../../context/WishlistContext";
 import { CartContext } from "../../../context/CartContext";
 import { ProductContext } from "../../../context/ProductContext";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../../RootLayout/Navbar/Navbar";
 
 const SingleProductPage = () => {

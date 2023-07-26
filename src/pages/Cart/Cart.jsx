@@ -13,8 +13,7 @@ import "./CartItemsCard.css";
 const Cart = () => {
   const { cartProducts, setCartProducts, removeCartHandler } =
     useContext(CartContext);
-  const { isWishlistProductPresent, addWishlistItems } =
-    useContext(WishlistContext);
+  const { addWishlistItems } = useContext(WishlistContext);
 
   // const fetchCartDetails = () => {
   //   const token = localStorage.getItem("token");

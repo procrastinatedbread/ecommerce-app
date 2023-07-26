@@ -12,8 +12,7 @@ import { Link } from "react-router-dom";
 
 const Wishlist = () => {
   const { state, removeWishlistHandler } = useContext(WishlistContext);
-  const { isCartProductPresent, addCartItems, removeCartHandler } =
-    useContext(CartContext);
+  const { isCartProductPresent, addCartItems } = useContext(CartContext);
 
   console.log(state);
   return (
