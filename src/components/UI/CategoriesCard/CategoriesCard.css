@@ -1,8 +1,8 @@
 .category-card {
-  width: 10vw;
-  border: 1px solid gray;
-  box-shadow: 2px 2px 0px 0px gray;
-  padding: 3vw;
+  width: 14rem;
+  border: 0.1rem solid gray;
+  box-shadow: 0.2rem 0.2rem 0rem 0rem gray;
+  padding: 3rem;
   border-radius: 50%;
 
   background-image: linear-gradient(
@@ -12,12 +12,14 @@
     #cac8c8 75%
   );
   text-align: center;
-  box-shadow: 10px 10px 10px 0px burlywood;
+  box-shadow: 1rem 1rem 1rem 0rem burlywood;
 }
 
 .category-title {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 3rem;
 }
 .category-description {
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.4rem;
 }

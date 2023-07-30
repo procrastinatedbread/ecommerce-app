@@ -1,0 +1,124 @@
+.price-slider {
+  width: 100%;
+}
+.price-slider > input {
+  width: 100%;
+}
+.filters-input-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.filters-input-header > button {
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  color: burlywood;
+  padding: 1rem 1rem;
+  font-size: 3rem;
+}
+.filters-clear {
+  font-size: ;
+}
+
+.filters-input {
+  width: 26rem;
+  height: fit-content;
+  background-image: linear-gradient(
+    to right,
+
+    #333232 25%,
+    #070707 75%
+  );
+  box-shadow: 1rem 1rem 1rem 0rem burlywood;
+  color: burlywood;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2rem;
+  padding: 1.5rem 1.5rem;
+  position: sticky;
+  top: 16.9rem;
+  @media (max-width: 998px) {
+    width: 23rem;
+    position: sticky;
+    top: 15rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 22rem;
+    top: 11.4rem; /* Adjust this value based on your Navbar's height and add an extra offset if needed */
+  }
+  /* top: calc(12rem + 6rem);
+  z-index: 1; */
+}
+.price-range {
+  display: flex;
+  justify-content: space-between;
+}
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.5rem;
+  row-gap: 1rem;
+}
+.ratings-filter {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 1.5rem;
+  row-gap: 1rem;
+}
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.5rem;
+  row-gap: 1rem;
+}
+@media (screen: 998px) {
+  /* .price-slider {
+    width: 100%;
+  }
+  .price-slider > input {
+    width: 100%;
+  } */
+  .filters-input-header {
+    /* display: flex;
+    justify-content: space-between; */
+    margin-bottom: 1rem;
+  }
+  .filters-input-header > button {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .filters-input {
+    width: 16rem;
+
+    font-size: 2rem;
+    padding: 1.5rem 1.5rem;
+    position: sticky;
+    top: 16rem;
+  }
+  .price-range {
+    display: flex;
+    justify-content: space-between;
+  }
+  .category-filter {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 1.5rem;
+    row-gap: 1rem;
+  }
+  .ratings-filter {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 1.5rem;
+    row-gap: 1rem;
+  }
+  .price-filter {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 1.5rem;
+    row-gap: 1rem;
+  }
+}

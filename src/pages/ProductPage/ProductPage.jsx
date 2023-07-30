@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import Navbar from "../../components/RootLayout/Navbar/Navbar";
-import FiltersComponent from "../../components/UI/FiltersComponent/FiltersComponent";
+import FiltersComponent from "./FiltersComponent";
 
 import { CartContext } from "../../context/CartContext";
 import { ProductContext } from "../../context/ProductContext";
@@ -28,7 +28,10 @@ const ProductPage = () => {
     <div>
       <Navbar />
       <div className="products-and-filters">
-        <FiltersComponent />
+        <div className="filters-display-section">
+          <FiltersComponent />
+        </div>
+
         <div className="products-display-section">
           {filteredPriceProducts.map((product) => {
             const { _id, img, originalPrice, price, rating, name, author } =

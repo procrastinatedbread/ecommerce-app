@@ -1,8 +1,8 @@
 .single-product-card {
-  width: 40vw;
-  height: 65vh;
-  border: 1px solid black;
-  margin: 100px auto;
+  width: 40rem;
+  height: 65rem;
+  border: 0.1rem solid black;
+  margin: 10rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -13,37 +13,37 @@
     #333232 25%,
     #070707 75%
   );
-  box-shadow: 10px 10px 10px 0px burlywood;
+  box-shadow: 1rem 1rem 1rem 0rem burlywood;
   color: burlywood;
 }
 .single-product-card-book-cover {
-  height: 50vh;
-  margin-left: 20px;
+  height: 50rem;
+  margin-left: 2rem;
   /* border: 1px solid wheat; */
 }
 .single-product-card-book-cover > .single-product-card-book-cover-image {
   width: 100%;
-  height: 50vh;
+  height: 50rem;
 }
 .single-product-card-book-details {
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   /* border: 1px solid wheat; */
 }
 
 .single-product-card-book-price {
-  font-size: 35px;
+  font-size: 3.5rem;
   color: burlywood;
   /* align-self: center; */
 }
 .single-product-card-book-price > s {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: grey;
 }
 .single-product-card-book-price > span {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: bold;
   color: green;
 }
@@ -54,7 +54,7 @@
   font-size: 1.3rem;
 }
 .single-product-card-product-features > p {
-  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
 }
 .single-product-details {
   color: coral;
@@ -68,6 +68,6 @@
     #070707 75%
   );
   color: burlywood;
-  font-size: 20px;
-  padding: 7px 10px;
+  font-size: 2rem;
+  padding: 0.7rem 1rem;
 }

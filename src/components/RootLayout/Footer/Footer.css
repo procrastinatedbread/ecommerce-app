@@ -10,7 +10,7 @@
   color: aliceblue;
   font-family: Georgia, "Times New Roman", Times, serif;
   align-items: baseline;
-  padding: 4vh;
+  padding: 4rem;
 }
 .first-list {
   list-style-type: none;
@@ -25,9 +25,9 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .list-item {
-  padding: 1vh;
-  font-size: large;
-  margin: 1vh;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 0.75rem;
 }
 .list-item-link {
   color: burlywood;

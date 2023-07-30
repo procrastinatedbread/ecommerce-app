@@ -1,76 +1,76 @@
 .signup-card {
-  width: 467px;
-  border: 1px solid black;
-  height: 520px;
+  width: 46.7rem;
+  border: 0.1rem solid black;
+  height: 52rem;
   text-align: center;
-  margin: 50px auto;
+  margin: 5rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
+  gap: 2.5rem;
   background-image: linear-gradient(
     to right,
 
     #333232 25%,
     #070707 75%
   );
-  box-shadow: 10px 10px 10px 0px burlywood;
+  box-shadow: 1rem 1rem 1rem 0rem burlywood;
   /* align-items: center; */
   color: burlywood;
-  padding: 20px 2px;
+  padding: 2rem 0.2rem;
 }
 .login-card-name-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
 .login-card-name-section > label {
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 .login-card-name-section > input {
   width: 70%;
   margin: auto;
-  height: 25px;
+  height: 2.5rem;
   font-size: larger;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
 }
 .login-card-email-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   /* margin-bottom: 20px; */
   /* border: 1px solid black; */
 }
 .login-card-email-section > label,
 .login-card-password-section > label {
   /* align-items: center; */
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 .login-card-email-section > input,
 .login-card-password-section > input {
   width: 70%;
   margin: auto;
-  height: 25px;
+  height: 2.5rem;
   font-size: larger;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
 }
 .login-card-password-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
 .login-link {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: burlywood;
-  border: 1px solid burlywood;
-  margin: 0px auto;
-  padding: 10px 10px;
+  border: 0.1rem solid burlywood;
+  margin: 0rem auto;
+  padding: 1rem 1rem;
 }
 .login-link:hover {
   color: coral;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
 }
 /* .login-card-email-section > input::placeholder,
 .login-card-password-section > input::placeholder {
@@ -79,13 +79,13 @@
 } */
 .sign-up-link {
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.7rem;
   color: burlywood;
-  border: 1px solid burlywood;
-  margin: 0px auto;
-  padding: 10px 10px;
+  border: 0.1rem solid burlywood;
+  margin: 0rem auto;
+  padding: 1rem 1rem;
 }
 .sign-up-link:hover {
   color: coral;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
 }

@@ -2,10 +2,9 @@ import React, { useContext, useState } from "react";
 import "./FiltersComponent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { ProductContext } from "../../../context/ProductContext";
+import { ProductContext } from "../../context/ProductContext";
 
 const FiltersComponent = () => {
-  const [value, setValue] = useState(0);
   const { state, dispatch } = useContext(ProductContext);
 
   return (
@@ -13,6 +12,7 @@ const FiltersComponent = () => {
       <div className="filters-input-header">
         <h3>Filters</h3>
         <button
+          className="filters-clear"
           onClick={() => {
             dispatch({ type: "CLEAR_FILTERS" });
             console.log("clear");

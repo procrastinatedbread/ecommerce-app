@@ -57,10 +57,14 @@ const Footer = () => {
           <ul className="third-list">
             <li className="list-item"> Resources </li>
             <li className="list-item">
-              <NavLink className="list-item-link">Sign up</NavLink>{" "}
+              <NavLink to="/signup" className="list-item-link">
+                Sign up
+              </NavLink>{" "}
             </li>
             <li className="list-item">
-              <NavLink className="list-item-link">Sign in</NavLink>{" "}
+              <NavLink to="/login" className="list-item-link">
+                Sign in
+              </NavLink>{" "}
             </li>
           </ul>
         </div>

@@ -1,25 +1,25 @@
 .book-card {
-  width: 300px;
-  height: 500px;
+  width: 30rem;
+  height: 50rem;
   background-image: linear-gradient(
     to right,
 
     #333232 25%,
     #070707 75%
   );
-  border: 1px solid black;
+  border: 0.1rem solid black;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(10, 1fr);
   font-size: larger;
-  box-shadow: 10px 10px 10px 0px burlywood;
-  padding: 10px 2px;
+  box-shadow: 1rem 1rem 1rem 0rem burlywood;
+  padding: 1rem 0.2rem;
 }
 .book-cover {
   grid-area: 1/1/7/3;
   background-color: black;
-  margin: 0px 10px;
-  margin-top: 5px;
+  margin: 0rem 1rem;
+  margin-top: 0.5rem;
 }
 /* .book-cover > img; */
 .book-cover > img {
@@ -36,42 +36,42 @@
   grid-area: 10/1/11/3;
 }
 .book-price {
-  padding: 10px;
+  padding: 1rem;
   color: burlywood;
-  font-size: 30px;
+  font-size: 3rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   justify-self: center;
 }
 .book-price > s {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: grey;
 }
 .book-price > span {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: bold;
   color: green;
 }
 .book-basic-details {
   color: burlywood;
-  padding: 10px;
+  padding: 1rem;
 }
 .book-basic-details > .book-title {
-  font-size: 23px;
+  font-size: 2.3rem;
 }
 .book-basic-details > .book-author {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .book-rating {
   color: burlywood;
 }
 .book-rating {
-  padding: 14px;
-  font-size: 28px;
+  padding: 1.4rem;
+  font-size: 2.8rem;
 }
 .book-add-to-cart,
 .book-add-to-wishlist {
-  font-size: 22px;
+  font-size: 2.2rem;
   background-image: linear-gradient(
     to right,
 
@@ -79,7 +79,7 @@
     #070707 75%
   );
   color: burlywood;
-  margin: 5px 5px;
+  margin: 0.5rem 0.5rem;
 }
 .book-add-to-cart:hover {
   color: coral;

@@ -94,6 +94,7 @@ const Cart = () => {
                       onClick={() =>
                         changeQuantityHandler(product._id, "decrement")
                       }
+                      disabled={product.qty === 1}
                     >
                       -
                     </button>{" "}
@@ -106,7 +107,7 @@ const Cart = () => {
                       +
                     </button>
                   </div>
-                  {/* {isWishlistProductPresent(productId)?():()} */}
+
                   <button
                     className="cart-items-card-add-to-cart"
                     onClick={() => {
